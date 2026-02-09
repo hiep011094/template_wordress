@@ -1,0 +1,8 @@
+/node_modules
+/public/sample.html
+/public
+/src/*
+
+!/src/wp-content/
+/src/wp-content/*
+!/src/wp-content/themes/

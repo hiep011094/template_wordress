@@ -1,0 +1,34 @@
+{
+  "version": 3,
+  "settings": {
+    "spacing": {
+      "padding": true,
+      "margin": true,
+      "blockGap": true
+    },
+     "typography": {
+      "fontFamilies": [
+        {
+          "fontFamily": "\"Zen Kaku Gothic Antique\", sans-serif",
+          "slug": "font-zen",
+          "name": "Zen Kaku Gothic Antique"
+        },
+        {
+          "fontFamily": "\"IBM Plex Sans JP\", serif",
+          "slug": "font-ibm",
+          "name": "IBM Plex Sans JP"
+        },
+        {
+          "fontFamily": "\"Noto Sans JP\", serif",
+          "slug": "font-noto",
+          "name": "Noto Sans JP"
+        }
+      ]
+    }
+  },
+  "styles": {
+    "color": {
+      "text": "var(--base)"
+    }
+  }
+}
