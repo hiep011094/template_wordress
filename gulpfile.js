@@ -252,6 +252,7 @@ function watchFiles() {
   const scssWatcher = gulp.watch(`./src/wp-content/themes/${theme_name}/assets/scss/**/*.scss`, gulp.parallel(style));
   const scssDestDirs = [
     pathModule.resolve('./public/assets/css'),
+    pathModule.resolve(`./src/wp-content/themes/${theme_name}/assets/css`),
   ];
 
   addScssUnlinkHandler(
@@ -279,9 +280,10 @@ function watchFiles() {
   ].filter(Boolean));
 
   // Images
-  const imgWatcher = gulp.watch(`./src/wp-content/themes/${theme_name}/assets/images/**`, images);
-  addUnlinkHandler_img(imgWatcher, pathModule.resolve(`./src/wp-content/themes/${theme_name}/assets/images`), [
-    pathModule.resolve('./public/assets/images')
+  const imgWatcher = gulp.watch(`./src/wp-content/themes/${theme_name}/assets/images-convert/**`, images);
+  addUnlinkHandler_img(imgWatcher, pathModule.resolve(`./src/wp-content/themes/${theme_name}/assets/images-convert`), [
+    pathModule.resolve('./public/assets/images'),
+    pathModule.resolve(`./src/wp-content/themes/${theme_name}/assets/images`)
   ].filter(Boolean));
 
   // Videos
