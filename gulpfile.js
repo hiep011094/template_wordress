@@ -70,7 +70,8 @@ function copyTo(src, ...dests) {
 // CSS
 function style() {
   const dests = [
-    './public/assets/css'
+    './public/assets/css',
+    `./src/wp-content/themes/${theme_name}/assets/css`
   ];
   const processors = [
     sortMediaQueries({ sort: 'mobile-first' }),
@@ -85,6 +86,7 @@ function style() {
     .pipe(sourcemaps.write('.'))
     .pipe(gulpCached('linting'))
     .pipe(gulp.dest(dests[0]))
+    .pipe(gulp.dest(dests[1]))
 }
 
 // SCSS
