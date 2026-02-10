@@ -7,7 +7,7 @@ function written_enqueue_block_variations() {
 
 	wp_enqueue_script(
 		'written-enqueue-block-variations',
-		get_template_directory_uri() . '/assets/block-theme/variations.js',
+		get_template_directory_uri() . '/assets/js/blockeditor-variations.js',
 		array( 'wp-rich-text','wp-blocks', 'wp-dom-ready', 'wp-element', 'wp-block-editor', 'wp-components', 'wp-i18n', 'wp-primitives', 'lodash' ),
 		wp_get_theme()->get( 'Version' ),
 		false
@@ -24,13 +24,13 @@ add_action( 'enqueue_block_editor_assets', 'written_enqueue_block_variations' );
 
 add_action( 'after_setup_theme', function () {
 	add_theme_support( 'editor-styles' );
-	add_editor_style( 'assets/block-theme/style.css' );
+	add_editor_style( 'assets/css/blockeditor.css' );
 });
 
 add_action( 'wp_enqueue_scripts', function () {
 	wp_enqueue_style(
 		'mytheme-style',
-		get_parent_theme_file_uri( '/assets/block-theme/style.css' ),
+		get_parent_theme_file_uri( '/assets/css/blockeditor.css' ),
 		array( 'wp-block-library' ),
 		null
 	);

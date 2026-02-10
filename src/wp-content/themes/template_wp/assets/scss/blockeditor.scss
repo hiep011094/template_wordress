@@ -1,3 +1,4 @@
+@use "sass:math";
 @use "./global" as *;
 
 .editor-styles-wrapper, .block-editor-writing-flow{
@@ -30,7 +31,7 @@
         font-family: $font-family-noto;
     }
     .has-font-ibm-font-family{
-        font-family: $font-family-en;
+        font-family: $font-family-fira;
     }
     .has-font-zen-font-family{
         font-family: $font-family-base;
@@ -427,7 +428,7 @@
             display: block;
         }
         &__num{
-            font-family: $font-family-en;
+            font-family: $font-family-fira;
             @extend %fz-16 ;
             font-weight: 700;
             letter-spacing: 0.06em;
@@ -702,7 +703,7 @@
     &__num{
         @extend %fz-16;
         font-weight: 700;
-        font-family: $font-family-en;
+        font-family: $font-family-fira;
         line-height: 1;
         color: var(--white);
         background-color: var(--base);
